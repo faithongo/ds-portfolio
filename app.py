@@ -50,23 +50,24 @@ st.markdown("---")
 # 4. Featured Projects
 st.header("Featured Projects")
 
-with st.expander("Project 1: Customer Churn Prediction Model", expanded=True):
+
+with st.expander("Project 1: Actuarial Modeling for Kenya's NHIF to SHIF Transition", expanded=True):
     st.markdown("""
-    - **Problem:** High customer attrition rate leading to revenue loss.
-    - **Solution:** Built a Random Forest classifier to identify at risk customers, engineered features from transactional data, and deployed an interactive Streamlit app for the sales team.
-    - **Impact:** Achieved **87% recall** on the minority class, allowing the team to intervene early and potentially save ~15% of at risk accounts.
-    - **Stack:** Python, scikit-learn, Pandas, Streamlit
+    - **Problem:** The new SHIF 2.75% premium with a KES 300 floor poses affordability risks for low-income households, threatening fund solvency.
+    - **Solution:** Developed R-based actuarial models, including an ARIMA forecast for claims (2025–2029) and a logistic regression model to predict household default risk based on income volatility.
+    - **Impact:** Identified the KES 10,909 break-even income threshold and recommended an Adjusted Progressive Premium Model (APPM) to inform sustainable policy design.
+    - **Stack:** R, ggplot2, ARIMA Forecasting, Logistic Regression, Git
     """)
-    #col1, col2 = st.columns(2)
-    #with col1:
-     #   st.markdown("[View GitHub Repo](https://github.com/yourusername/project1)")
-    #with col2:
-     #   st.markdown("[Live Demo](https://yourproject1.streamlit.app)")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown(f"[View My GitHub Repo](https://github.com/faithongo/nhif-shif-actuarial-models-r)")
+    with col2:
+        st.markdown("[View Project Presentation](https://jessywaweru.github.io/FINAL-YR-PRESENTATION/)")
 
 with st.expander("Project 2: Real-Estate Price Explorer & Predictor"):
     st.markdown("""
     - **Problem:** Homebuyers lack transparent, data-driven tools to estimate fair market value.
-    - **Solution:** Scraped real estate data, cleaned it, and built a multiple linear regression model. Created a dashboard where users input features to get instant price estimates.
+    - **Solution:** Scraped real estate data, cleaned it and built a multiple linear regression model. Created a dashboard where users input features to get instant price estimates.
     - **Impact:** Model achieved an R-squared of 0.85. Dashboard receives consistent traffic from local real estate groups.
     - **Stack:** Python, BeautifulSoup, Statsmodels, Plotly, Streamlit
     """)
